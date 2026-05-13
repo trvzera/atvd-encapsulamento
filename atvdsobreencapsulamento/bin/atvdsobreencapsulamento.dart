@@ -1,5 +1,16 @@
-import 'package:atvdsobreencapsulamento/atvdsobreencapsulamento.dart' as atvdsobreencapsulamento;
+import 'package:atvdsobreencapsulamento/atvdsobreencapsulamento.dart';
+import 'dart:io';
+
 
 void main(List<String> arguments) {
-  print('Hello world: ${atvdsobreencapsulamento.calculate()}!');
+  while(true){
+      try {
+        stdout.write('Temperatura: ');
+        double temperatura = double.parse(stdin.readLineSync() ?? '');
+        final novoobjeto = Produto(temperatura);
+        print(novoobjeto.temperatura);
+      }catch (e) {
+        print('Erro: $e');
+      }
+  }
 }
